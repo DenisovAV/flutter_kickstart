@@ -50,7 +50,7 @@ fun MyApp() {
         composable("details/{userName}") { backStackEntry ->
             DetailsScreen(
                 userName = backStackEntry.arguments?.getString("userName") ?: "",
-                onBackClick = { navController.popBackStack() } // Обработчик нажатия кнопки "Назад"
+                onBackClick = { navController.popBackStack() }
             )
         }
     }
@@ -66,7 +66,7 @@ fun UserList(navController: NavHostController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Compose Demo Home Page") }, // Заголовок панели
+                title = { Text("Compose Demo Home Page") },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primary,
                     titleContentColor = Color.White
@@ -155,7 +155,7 @@ fun DetailsScreen(userName: String, onBackClick: () -> Unit) {
                 .padding(16.dp)
         ) {
             Image(
-                painter = painterResource(id = R.drawable.android_circle), // Замените на нужное изображение
+                painter = painterResource(id = R.drawable.android_circle),
                 contentDescription = null,
                 modifier = Modifier
                     .fillMaxWidth()
